@@ -608,13 +608,13 @@ void main( )
 程序的作用是逐个两文件（如果均能打开）中的字符，输出第一对不同的字符及至此读取到几个'?'。其中比较部分程序段作用见注释。
 ```c
 	while (!feof(f1)||!feof(f2)){//当设置了与流关联的文件结束标识符时，feof()返回一个非零值，否则返回零。f1或f2没到结尾即进入循环
-       ch1=fgetc(f1);//fgetc()从指定的流 stream 获取下一个字符（一个无符号字符），并把位置标识符往前移动
-	   ch2=fgetc(f2);
-	   if(ch1!=ch2){
-          printf("%c#%c#",ch1,ch2);
-	      printf("%d#", count);
-	      break;//该对字符不相同时跳出while循环
-	   }
-	   if(ch1=='?') count++;
+       		ch1=fgetc(f1);//fgetc()从指定的流 stream 获取下一个字符（一个无符号字符），并把位置标识符往前移动
+	   	ch2=fgetc(f2);
+	   	if(ch1!=ch2){
+         		printf("%c#%c#",ch1,ch2);
+	      		printf("%d#", count);
+	      		break;//该对字符不相同时跳出while循环
+	   	}
+	   	if(ch1=='?') count++;
 	}
 ```
